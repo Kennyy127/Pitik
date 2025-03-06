@@ -279,14 +279,33 @@ footer {
     }
 }
 
-/* Ensure all section headers are centered */
+/* 🔹 Fix global alignment issues */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything */
+    text-align: center; /* Ensures text is properly aligned */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Ensure all sections are properly aligned */
+section {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto; /* Ensures center alignment */
+    text-align: center;
+}
+
+/* 🔹 Fix "OUR PRODUCTS" heading */
 h2 {
     text-align: center;
     width: 100%;
-    margin: 0 auto; /* Centering fix */
+    margin: 0 auto;
 }
 
-/* Fix the misalignment of the product section */
+/* 🔹 Fix "Products" section alignment */
 #products {
     display: flex;
     justify-content: center;
@@ -296,44 +315,47 @@ h2 {
     padding: 40px 0;
 }
 
+/* 🔹 Fix product section wrapper */
 .product-wrapper {
     width: 85%;
     max-width: 1000px;
-    margin: 0 auto; /* Ensures full centering */
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* Fix the footer alignment */
+/* 🔹 Fix footer alignment */
 footer {
     text-align: center;
     width: 100%;
     padding: 20px;
-    background-color: #7A0000; /* Ensure footer matches theme */
+    background-color: #7A0000; /* Matches theme */
     color: white;
     font-size: 14px;
+    margin-top: 20px;
 }
 
-/* Fix alignment of contact details */
+/* 🔹 Fix contact section alignment */
 #contacts {
     text-align: center;
     width: 85%;
     max-width: 1000px;
-    margin: 0 auto; /* Ensures it's centered */
+    margin: 0 auto;
 }
 
-/* Ensure all sections maintain proper width */
+/* 🔹 Ensure all sections have proper width */
 .container {
     width: 85%;
     max-width: 1000px;
-    margin: 0 auto; /* Keeps everything centered */
+    margin: 0 auto;
 }
 
-/* Responsive Fix for Mobile */
+/* 🔹 Responsive Fix for Mobile */
 @media (max-width: 768px) {
-    h2 {
-        text-align: center;
+    section {
+        width: 90%;
     }
 
     .product-wrapper, #contacts, footer {
-        width: 90%; /* Keeps everything centered on small screens */
+        width: 90%;
     }
 }
