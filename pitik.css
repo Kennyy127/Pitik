@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #D69A2E; /* Slightly darker shade */
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #5A0000;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 100px;
+}
+
+h1, h2 {
+    color: #5A0000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#about, #vision-mission, #menu, #contact, #sauces {
+    padding: 30px;
+    background-color: #c8c2b9;
+    margin: 25px auto;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.vision-mission-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.vision, .mission {
+    width: 45%;
+    min-width: 250px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    display: flex;
+    background-color: #5A0000;
+    border-radius: 12px;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.menu-text {
+    text-align: left;
+    flex: 1;
+}
+
+.menu-item h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+#sauces {
+    padding: 30px;
+    background-color: #c8c2b9;
+    margin: 25px auto;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.sauce-container {
+    display: flex;
+    justify-content: center; /* Center-align both boxes */
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sauce-box {
+    background-color: #5A0000;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 45%; /* Ensures side-by-side layout */
+    min-width: 280px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Ensures text inside remains balanced */
+.sauce-box h3 {
+    font-size: 18px;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.sauce-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sauce-box li {
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .sauce-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sauce-box {
+        width: 90%;
+    }
+}
+
+#products {
+    padding: 60px 0;
+    background-color: #D69A2E; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-wrapper {
+    background-color: #c8c2b9; /* Slightly lighter backdrop */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 85%;
+    max-width: 1000px;
+}
+
+.product-wrapper h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5A0000  ;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-box {
+    background-color: #5A0000; /* Dark gray cards */
+    padding: 15px;
+    border-radius: 12px;
+    width: 30%;
+    min-width: 250px;
+    max-width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product-box:hover {
+    transform: scale(1.05); /* Hover effect */
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+.product-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #EAEAEA; /* Light gray text */
+    margin-top: 10px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-box {
+        width: 90%;
+    }
+}
+
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-box {
+        width: 90%;
+        height: auto;
+        margin-bottom: 10px; /* Add slight space between stacked cards */
+    }
+
+    .product-box img {
+        height: 180px; /* Slightly smaller for mobile */
+    }
+}
+
+
+footer {
+    background-color: #5A0000;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .vision-mission-container {
+        flex-direction: column;
+    }
+
+    .vision, .mission {
+        width: 100%;
+        text-align: center;
+    }
+}
+
