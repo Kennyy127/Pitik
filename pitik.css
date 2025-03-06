@@ -279,31 +279,37 @@ footer {
     }
 }
 
-/* Ensure the header (logo) is perfectly centered */
+/* Ensure the header is centered */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 10px 0;
-    background-color: #7A0000; /* Match the theme */
+    background-color: #7A0000; /* Match theme */
 }
 
 header img {
-    max-width: 120px; /* Adjust logo size */
+    max-width: 150px; /* Keep logo size controlled */
     height: auto;
-    display: block;
 }
 
-/* Ensure all sections are centered properly */
+/* Make sure all content sections are aligned properly */
 .container {
     width: 90%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto; /* Ensures centering */
     text-align: center;
 }
 
-/* Center the product section */
+/* Center section headers */
+h2 {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Fix product section alignment */
 #products {
     display: flex;
     justify-content: center;
@@ -311,33 +317,12 @@ header img {
     text-align: center;
     width: 100%;
     padding: 40px 0;
-    background-color: #E0D9CF; /* Match other sections */
 }
 
 .product-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Space between products */
-    flex-wrap: wrap;
     width: 85%;
     max-width: 1000px;
     margin: 0 auto;
-}
-
-/* Product Boxes Styling */
-.product-box {
-    background-color: #7A0000;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    width: 250px; /* Keep all boxes the same size */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.product-box img {
-    max-width: 100%;
-    border-radius: 8px;
 }
 
 /* Fix contact section alignment */
@@ -358,7 +343,7 @@ footer {
     font-size: 14px;
 }
 
-/* Responsive Fix for Mobile */
+/* Fixes for Mobile Screens */
 @media (max-width: 768px) {
     header {
         padding: 5px 0;
@@ -368,16 +353,11 @@ footer {
         width: 95%;
     }
 
-    #products {
-        padding: 30px 0;
+    h2 {
+        font-size: 20px;
     }
 
-    .product-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-box {
-        width: 90%; /* Make product boxes full-width on mobile */
+    .product-wrapper, #contacts, footer {
+        width: 95%;
     }
 }
