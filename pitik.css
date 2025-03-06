@@ -279,3 +279,61 @@ footer {
     }
 }
 
+/* Ensure all section headers are centered */
+h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; /* Centering fix */
+}
+
+/* Fix the misalignment of the product section */
+#products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.product-wrapper {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto; /* Ensures full centering */
+}
+
+/* Fix the footer alignment */
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #7A0000; /* Ensure footer matches theme */
+    color: white;
+    font-size: 14px;
+}
+
+/* Fix alignment of contact details */
+#contacts {
+    text-align: center;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto; /* Ensures it's centered */
+}
+
+/* Ensure all sections maintain proper width */
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto; /* Keeps everything centered */
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+    h2 {
+        text-align: center;
+    }
+
+    .product-wrapper, #contacts, footer {
+        width: 90%; /* Keeps everything centered on small screens */
+    }
+}
