@@ -279,83 +279,109 @@ footer {
     }
 }
 
-/* 🔹 Fix global alignment issues */
+/* Ensure the header, sections, and footer are properly centered */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers everything */
-    text-align: center; /* Ensures text is properly aligned */
-    width: 100%;
+    text-align: center;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* 🔹 Ensure all sections are properly aligned */
-section {
-    width: 85%;
+/* Ensure header stays centered and doesn't disappear */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+/* Fix section alignment and ensure proper width */
+#about, #vision-mission, #menu, #sauces, #products, #contact {
+    width: 90%;
     max-width: 1000px;
-    margin: 0 auto; /* Ensures center alignment */
+    margin: 0 auto 20px auto;
     text-align: center;
+    border-radius: 12px;
 }
 
-/* 🔹 Fix "OUR PRODUCTS" heading */
-h2 {
+/* Ensure all section titles are centered */
+h1, h2, h3 {
     text-align: center;
     width: 100%;
-    margin: 0 auto;
 }
 
-/* 🔹 Fix "Products" section alignment */
+/* Fix product section alignment */
 #products {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
     padding: 40px 0;
 }
 
-/* 🔹 Fix product section wrapper */
+/* Make sure product cards stay in the right position */
 .product-wrapper {
     width: 85%;
     max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
 }
 
-/* 🔹 Fix footer alignment */
+/* Fix the footer alignment */
 footer {
     text-align: center;
     width: 100%;
     padding: 20px;
-    background-color: #7A0000; /* Matches theme */
-    color: white;
-    font-size: 14px;
-    margin-top: 20px;
 }
 
-/* 🔹 Fix contact section alignment */
-#contacts {
-    text-align: center;
+/* Fix menu grid alignment */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Fix spacing between elements */
+.menu-item, .product-box, .sauce-box {
+    margin-bottom: 15px;
+}
+
+/* Ensure the contact section is properly centered */
+#contact {
     width: 85%;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* 🔹 Ensure all sections have proper width */
-.container {
-    width: 85%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* 🔹 Responsive Fix for Mobile */
+/* 🌟 Mobile Fixes */
 @media (max-width: 768px) {
-    section {
-        width: 90%;
+    /* Adjust section width for smaller screens */
+    #about, #vision-mission, #menu, #sauces, #products, #contact {
+        width: 95%;
     }
 
-    .product-wrapper, #contacts, footer {
+    /* Make menu and product sections stack vertically */
+    .menu-grid, .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ensure products take full width on mobile */
+    .product-box {
         width: 90%;
+        max-width: 300px;
+    }
+
+    /* Adjust image sizes for mobile */
+    .menu-item img, .product-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Fix footer width on mobile */
+    footer {
+        width: 100%;
+        padding: 15px;
     }
 }
